@@ -1,0 +1,2 @@
+# This project doesn't use clang-format.
+BasedOnStyle: none

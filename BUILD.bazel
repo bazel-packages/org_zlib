@@ -1,0 +1,43 @@
+## Copyright (C) 2019 Yannic Bonenberger
+## For conditions of distribution and use, see copyright notice in zlib.h
+
+licenses(["notice"])  # zlib-license
+
+cc_library(
+    name = "org_zlib",
+    srcs = [
+        "adler32.c",
+        "compress.c",
+        "crc32.c",
+        "deflate.c",
+        "gzclose.c",
+        "gzlib.c",
+        "gzread.c",
+        "gzwrite.c",
+        "infback.c",
+        "inffast.c",
+        "inflate.c",
+        "inftrees.c",
+        "trees.c",
+        "uncompr.c",
+        "zutil.c",
+    ],
+    hdrs = [
+        "crc32.h",
+        "deflate.h",
+        "gzguts.h",
+        "inffast.h",
+        "inffixed.h",
+        "inflate.h",
+        "inftrees.h",
+        "trees.h",
+        "zconf.h",
+        "zlib.h",
+        "zutil.h",
+    ],
+    copts = [
+        "-Wno-unused-variable",
+        "-Wno-implicit-function-declaration",
+    ],
+    visibility = ["//visibility:public"],
+)
