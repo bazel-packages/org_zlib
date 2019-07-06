@@ -41,3 +41,10 @@ cc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+alias(
+    name = "zlib",
+    actual = ":org_zlib",
+    deprecation = "Please migrate to :org_zlib.",
+    visibility = ["//visibility:public"],
+)
